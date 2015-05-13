@@ -1,0 +1,14 @@
+{
+  "name": "kerve-test",
+  "version": "0.0.0",
+  "authors": [
+    "Pedro Sland <pedro_sland@hotmail.com>"
+  ],
+  "description": "A test design project",
+  "license": "ISC",
+  "dependencies": {
+    "modernizr": "~2.8.3",
+    "nib": "~1.1.0",
+    "normalize.css": "~3.0.3"
+  }
+}

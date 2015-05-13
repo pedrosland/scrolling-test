@@ -1,0 +1,15 @@
+{
+  "name": "kerve-test",
+  "version": "0.0.0",
+  "description": "A test design project",
+  "scripts": {
+    "serve": "harp server .",
+    "watch": "babel --source-maps inline --watch public/es6 -d public/js"
+  },
+  "author": "Pedro Sland <pedro_sland@hotmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^5.2.17",
+    "harp": "^0.17.0"
+  }
+}

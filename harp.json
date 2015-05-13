@@ -1,0 +1,17 @@
+{
+	"globals": {
+		"nav": [
+			{
+				"href": "#",
+				"text": "Item 1"
+			},
+			{
+				"href": "#",
+				"text": "Longer item name"
+			}
+		],
+        "title": "Site",
+        "extraScript": null
+	}
+}
+
