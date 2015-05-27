@@ -1,19 +1,30 @@
 @import "_normalize.css"
 @import "_h5bp.css"
 
-scrollBgIndex = -1
+scrollFrontZIndex = 10
 
 body
     height 3000px
 
-.scroll-bg
-    z-index scrollBgIndex
+.scroll-bg--front
     position fixed
     top 0
     left 0
     overflow hidden
-    width 100%
+    z-index scrollFrontZIndex
 
-    img
-        height 100%
-        display block
+.pane-1
+    background-image url('https://farm8.staticflickr.com/7740/17342678630_66e4a35781_z_d.jpg')
+
+.pane-2
+    background-image url('https://farm8.staticflickr.com/7765/16907156624_843917e8e8_z_d.jpg')
+
+.pane
+    background-repeat no-repeat
+    background-size cover
+    height 100%
+    width  100%
+
+.pane-content
+    width 90%
+    margin 0 5%

@@ -5,6 +5,7 @@ env:
 
 globals:
   jQuery: false
+  $: false
 
 rules:
   strict: 0
