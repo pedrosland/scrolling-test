@@ -23,7 +23,7 @@
 
             var viewportHeight = $(window).height();
 
-            this.$parent.css('margin-top', viewportHeight);
+            this.$parent.css('margin-top', viewportHeight / 2);
 
             this.numPanes = this.$parent.children().length;
 
@@ -72,11 +72,7 @@
 
             console.log('viewportPercentage %s, viewportHeight %s', viewportPercentage, viewportHeight);
 
-            if(viewportPercentage > 0.5) {
-                this.$containerFront.css('top', (0.5 - viewportPercentage) * 2 * viewportHeight);
-            }else{
-                this.$containerFront.css('top', 0);
-            }
+            this.$containerFront.css('top', - viewportPercentage * 2 * viewportHeight);
 
             console.log('final index %s', index);
 
