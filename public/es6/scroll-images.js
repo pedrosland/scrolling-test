@@ -2,7 +2,7 @@
 
     class ImageScroller {
         constructor($parent){
-            this.speed = 0.2;
+            this.speed = 2;
 
             this.$parent = $parent;
             this.$container = $('<div class="scroll-bg">');
@@ -23,7 +23,7 @@
 
             var viewportHeight = $(window).height();
 
-            this.$parent.css('margin-top', viewportHeight / 2);
+            this.$parent.css('margin-top', viewportHeight / this.speed);
 
             this.numPanes = this.$parent.children().length;
 
@@ -62,25 +62,16 @@
         handleAnimationFrame(){
             var viewportHeight = $(window).height();
 
-            var totalHeight = viewportHeight * this.numPanes;
             var percentage = $(window).scrollTop() / viewportHeight;
             var index = Math.floor(percentage);
 
-            console.log('percentage %s, index %s', percentage, index);
-
             var viewportPercentage = percentage - index;
 
-            console.log('viewportPercentage %s, viewportHeight %s', viewportPercentage, viewportHeight);
-
-            this.$containerFront.css('top', - viewportPercentage * 2 * viewportHeight);
-
-            console.log('final index %s', index);
+            this.$containerFront.css('top', -viewportPercentage * this.speed * viewportHeight);
 
             if(this.currentIndex !== index){
                 this.setFrontImage(index);
             }
-
-            //this.$container.css('top', (-1 * this.$parent[0].scrollTop / this.speed) + 'px');
         }
     }
 
