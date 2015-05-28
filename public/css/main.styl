@@ -1,10 +1,18 @@
 @import "_normalize.css"
 @import "_h5bp.css"
 
-scrollFrontZIndex = 10
+scrollBgZIndex = -10
+scrollFrontZIndex = -5
 
 body
-    height 3000px
+    // height 3000px
+
+.scroll-panes
+    z-index scrollBgZIndex
+    height 100%
+    position absolute
+    top 0
+    width 100%
 
 .scroll-bg--front
     position fixed
@@ -20,10 +28,15 @@ body
     background-image url('https://farm8.staticflickr.com/7765/16907156624_843917e8e8_z_d.jpg')
 
 .pane
+    display table
     background-repeat no-repeat
     background-size cover
     height 100%
     width  100%
+
+.pane-wrapper
+    display table-cell
+    vertical-align middle
 
 .pane-content
     width 90%
