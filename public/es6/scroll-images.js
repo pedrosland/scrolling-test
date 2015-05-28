@@ -15,12 +15,17 @@
         init(){
             this.initListeners();
 
-            this.$container.append(this.$containerBack, this.$containerFront);
-            this.$parent.append(this.$container);
+            // this.$parent.children().appendTo(this.$containerBack);
+
+            // this.$container.append(this.$containerBack, this.$containerFront);
+            // this.$parent.append(this.$container);
+            this.$containerFront.insertBefore(this.$parent);
 
             var viewportHeight = $(window).height();
 
-            this.$containerFront.css('height', viewportHeight);
+            this.$parent.css('margin-top', viewportHeight);
+
+            this.numPanes = this.$parent.children().length;
 
             this.requestRender();
         }
@@ -40,7 +45,7 @@
         setFrontImage(index){
             // Move old front image to correct position
             var $oldFront = this.$containerFront.children();
-            if(index > 0){
+            if(this.currentIndex > 0){
                 this.$parent.find('.pane-' + this.currentIndex)
                     .after($oldFront);
             }else{
@@ -55,17 +60,31 @@
         }
 
         handleAnimationFrame(){
-            // var viewportHeight = $(window).height();
-            //
-            // var factor = viewportHeight / this.images.length;
-            // var index = Math.floor(this.$parent.parent()[0].scrollTop / factor);
-            // console.log('viewportHeight: %s, index: %s, images: %s, scrollTop: %s, factor: %s, progress: %s', viewportHeight, index, this.images.length, this.$parent[0].scrollTop, factor, this.$parent.parent()[0].scrollTop / factor);
-            //
-            // if(this.currentIndex !== index){
-            //     this.setFrontImage(index);
-            // }
-            //
-            // this.$container.css('top', (-1 * this.$parent[0].scrollTop / this.speed) + 'px');
+            var viewportHeight = $(window).height();
+
+            var totalHeight = viewportHeight * this.numPanes;
+            var percentage = $(window).scrollTop() / viewportHeight;
+            var index = Math.floor(percentage);
+
+            console.log('percentage %s, index %s', percentage, index);
+
+            var viewportPercentage = percentage - index;
+
+            console.log('viewportPercentage %s, viewportHeight %s', viewportPercentage, viewportHeight);
+
+            if(viewportPercentage > 0.5) {
+                this.$containerFront.css('top', (0.5 - viewportPercentage) * 2 * viewportHeight);
+            }else{
+                this.$containerFront.css('top', 0);
+            }
+
+            console.log('final index %s', index);
+
+            if(this.currentIndex !== index){
+                this.setFrontImage(index);
+            }
+
+            //this.$container.css('top', (-1 * this.$parent[0].scrollTop / this.speed) + 'px');
         }
     }
 
