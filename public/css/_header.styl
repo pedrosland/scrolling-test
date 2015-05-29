@@ -10,6 +10,8 @@
 /* ==============
     MOBILE: Menu
     ============== */
+nav
+    float right
 
 nav ul
     margin 0
@@ -29,20 +31,42 @@ nav a
     &:hover
         color #000
 
+// Nav sign up button
+.sign-up--nav
+    background #000
+
 
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 480px)
 
 /* ====================
     INTERMEDIATE: Menu
    ==================== */
 
-    nav a {
-        float: left;
-        margin: 0 1.7% 0;
-        padding: 0 2%;
-    }
-}
+    nav a
+        float left
+        margin 0 1.7%
+        padding 0 2%
+
+
+@media only screen and (min-width: 768px)
+
+    /* ====================
+    WIDE: CSS3 Effects
+    ==================== */
+
+    nav ul
+        float right
+
+    .title
+        float left
+
+    .sign-up--nav
+        position relative
+        top -1px
+        right -1px
+        width  370px
+        height navHeight + 2

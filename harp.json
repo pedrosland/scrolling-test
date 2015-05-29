@@ -3,15 +3,22 @@
 		"nav": [
 			{
 				"href": "#",
-				"text": "Item 1"
+				"text": "#Wanted Badly"
 			},
 			{
 				"href": "#",
-				"text": "Longer item name"
+				"text": "The Crime Scenes"
+			},
+			{
+				"href": "#",
+				"text": "Valentine’s Mystery"
+			},
+			{
+				"href": "#",
+				"text": "Shop SS15"
 			}
 		],
         "title": "Site",
         "extraScript": null
 	}
 }
-
