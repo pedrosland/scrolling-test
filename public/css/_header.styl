@@ -1,0 +1,48 @@
+//--------------------
+// Header
+//--------------------
+
+.header-container
+    height navHeight
+    background #fff
+    border 1px solid #eee
+
+/* ==============
+    MOBILE: Menu
+    ============== */
+
+nav ul
+    margin 0
+    padding 0
+    list-style-type none
+
+nav a
+    display block
+    line-height navHeight - 2
+
+    text-align center
+    text-decoration none
+    font-weight bold
+
+    color #929292
+
+    &:hover
+        color #000
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+/* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+
+    nav a {
+        float: left;
+        margin: 0 1.7% 0;
+        padding: 0 2%;
+    }
+}
