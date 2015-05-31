@@ -14,8 +14,9 @@ header
 .title
     width 202px
     height 35px
-    margin 8px 0 0 23px
-    image "/img/nav-logo.png"
+    margin 8px 0 7px 23px
+    image "/img/nav-logo.png" contain
+    background-repeat no-repeat
 
 // Nav
 
@@ -27,20 +28,24 @@ nav
     font-size 13px
     letter-spacing 2px
 
+    display none
+
 nav ul
     margin 0
     padding 0
     list-style-type none
+    clear both
 
 nav a
     display block
     line-height navHeight
 
-    text-align center
+    text-align left
     text-decoration none
     font-weight bold
     text-transform uppercase
 
+    padding 0 23px
     color #929292
 
     &:hover
@@ -50,16 +55,7 @@ nav a
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 480px)
-
-/* ====================
-    INTERMEDIATE: Menu
-   ==================== */
-
-    nav a
-        display inline-block
-        margin 0
-        padding 0 20px
+// @media only screen and (min-width: 480px)
 
 
 @media only screen and (min-width: 768px)
@@ -68,17 +64,37 @@ nav a
     WIDE: CSS3 Effects
     ==================== */
 
-    // nav ul
-    //     float right
-
     .title
         float left
 
-    .sign-up--nav
-        padding 0 30px
-        position relative
-        top -1px
-        height headerHeight
+// Landscape tablet
+@media only screen and (min-width: 1024px)
 
-    nav li:nth-last-child(2) a
-        padding-right 30px
+    .title
+        margin-bottom 0
+
+    nav
+        letter-spacing 1px
+
+        ul
+            clear none
+
+        a
+            text-align center
+            padding 0px 5px
+            display inline-block
+            margin 0
+
+        li:nth-last-child(2) a
+            padding-right 10px
+
+// Desktops
+@media only screen and (min-width: 1200px)
+    nav
+        letter-spacing 2px
+
+        a
+            padding 0 20px
+
+        nav li:nth-last-child(2) a
+            padding-right 30px

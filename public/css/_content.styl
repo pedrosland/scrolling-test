@@ -1,12 +1,18 @@
+.pane-content
+    font-size 12px
+    line-height 20px
+
 .body-logo
-    image "/img/body-logo.png"
-    width 426px
+    image "/img/body-logo.png" contain
+    background-repeat no-repeat
+    width 70%
     height 73px
     margin auto
 
 .wanted-badly
-    image "/img/wanted-badly.png"
-    width 898px
+    image "/img/wanted-badly.png" contain
+    background-repeat no-repeat
+    width 85%
     height 49px
     margin auto
 
@@ -17,3 +23,22 @@
 
 .pane-content
     text-align center
+
+@media only screen and (min-width: 768px)
+
+    .pane-text
+        max-width 35em
+        margin-left auto
+        margin-right auto
+
+    .body-logo
+        width 426px
+
+    .wanted-badly
+        width 898px
+
+@media only screen and (min-width: 1024px)
+
+    .pane-content
+        font-size 16px
+        line-height 26px
