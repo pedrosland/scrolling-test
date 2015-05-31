@@ -2,15 +2,12 @@
 // Header
 //--------------------
 
-.header-container
-    height navHeight
-    border-top 1px solid #eee
-
 header
     background #fff
     position fixed
     top 0
     width 100%
+    z-index headerZIndex
 
 // Logo
 
@@ -49,21 +46,6 @@ nav a
     &:hover
         color #000
 
-// Nav sign up button
-.sign-up--nav
-    background #000
-    width 205px
-    box-sizing: border-box
-
-    &:hover
-        color #fff
-
-    &.sign-up--completed
-        line-height normal
-        padding-top 11px
-        vertical-align middle
-
-
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -96,7 +78,7 @@ nav a
         padding 0 30px
         position relative
         top -1px
-        height navHeight + 1
+        height headerHeight
 
     nav li:nth-last-child(2) a
         padding-right 30px

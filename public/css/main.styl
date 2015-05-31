@@ -3,14 +3,19 @@
 @import "_normalize.css"
 @import "_h5bp.css"
 
-scrollBgZIndex = -10
-scrollFrontZIndex = -5
+scrollBgZIndex    =  1
+scrollFrontZIndex = 10
+headerZIndex      = 20
 
 navHeight = 50px
+headerHeight = navHeight + 1px
 
-@import "_header.styl"
-@import "_scroll-panes.styl"
+signUpPink = #f4b9c8
 
-.sign-up--completed
-    background #f4b9c8
-    color #fff
+socialSpriteImageWidth = 25px
+
+@import "_header"
+@import "_scroll-panes"
+@import "_sign-up"
+@import "_content"
+@import "_social"

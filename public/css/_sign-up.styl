@@ -1,0 +1,36 @@
+.sign-up
+    box-sizing: border-box
+
+.sign-up--nav
+    background #000
+    width 205px
+
+    &:hover
+        color #fff
+
+    &.sign-up--completed
+        line-height normal
+        padding-top 11px
+        vertical-align middle
+
+.sign-up--completed
+    background signUpPink
+    color #fff
+
+.sign-up--content
+    background signUpPink
+
+    // .sign-up--nav has these but this doesn't
+    line-height navHeight
+    text-transform uppercase
+    text-decoration none
+    color #333
+    font-weight bold
+    letter-spacing 2px
+
+    display inline-block
+    padding 0 40px
+    min-width 285px
+
+    &:hover
+        background #fff
