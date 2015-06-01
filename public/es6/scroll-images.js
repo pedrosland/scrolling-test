@@ -21,8 +21,6 @@
 
             this.numPanes = this.$parent.children().length;
 
-            this.$wrapper.css('overflow', 'hidden');
-
             this.setSizes();
 
             this.requestRender();
@@ -33,7 +31,7 @@
 
             this.$wrapper.find('.pane').height(viewportHeight - this.headerHeight);
 
-            this.$wrapper.css('height', viewportHeight * this.numPanes / this.speed - this.headerHeight);
+            this.$wrapper.css('height', viewportHeight * (this.numPanes + 1) / this.speed);
         }
 
         initListeners(){
