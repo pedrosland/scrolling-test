@@ -48,7 +48,6 @@
 
         handleResize(){
             this.setSizes();
-            this.setFrontImage();
             this.requestRender();
         }
 
