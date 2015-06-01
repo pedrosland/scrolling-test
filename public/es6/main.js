@@ -8,6 +8,11 @@ $(function(){
         }
     });
 
+    var $navList = $('nav ul');
+    $('.nav-icon').click(function(){
+        $navList.toggle();
+    });
+
     $('.sign-up').one('click', function(e){
         e.preventDefault();
 
