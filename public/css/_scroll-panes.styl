@@ -19,22 +19,30 @@
     height 100%
 
 .pane-1
-    background-image url('https://farm8.staticflickr.com/7740/17342678630_66e4a35781_z_d.jpg')
+    image '/img/bg1.jpg'
 
 .pane-2
-    background-image url('https://farm8.staticflickr.com/7765/16907156624_843917e8e8_z_d.jpg')
+    image '/img/bg2.jpg'
 
 .pane-3
-    background-image url('https://farm8.staticflickr.com/2848/12252450536_0027b4e384_z_d.jpg')
+    image '/img/bg3.jpg'
+
+.pane-4
+    image '/img/bg4.jpg'
+
+.pane-5
+    image '/img/bg5.jpg'
 
 .pane
     display table
     background-repeat no-repeat
+    background-position center
     background-size auto 100%
     height 100%
     width  100%
-    padding-top headerHeight
     box-sizing border-box
+    transform translatez(0)
+    margin-top navHeight
 
 .pane-wrapper
     display table-cell

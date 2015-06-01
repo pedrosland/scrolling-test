@@ -1,5 +1,5 @@
 $(function(){
-    $('.scroll-panes').scrollImages();
+    $('.scroll-panes').scrollImages(parseInt($('header').height(), 10));
 
     // Hack since this is a demo. Makes links nicer.
     $('body').on('click', 'a', function(e){
