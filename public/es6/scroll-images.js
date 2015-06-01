@@ -68,11 +68,8 @@
 
             this.currentIndex = index;
 
-            if(index === 0){
-                this.$parent.css('margin-top', $(window).height() / this.speed);
-            }else{
-                this.$parent.css('margin-top', 0);
-            }
+            // calculate offset for back from top allowing for speed
+            this.$parent.css('margin-top', -(index - 1) * $(window).height() / this.speed);
 
             var viewportHeight = $(window).height() - this.headerHeight;
 
