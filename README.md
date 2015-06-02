@@ -51,7 +51,9 @@ Due to work, time and "I can't face looking at another computer today" constrain
 
 I have chosen not to implement scrolling progress indicators or buttons. These should be easy to implement with some calculations and including `window.scrollTo()` in `handleAnimationFrame()`.
 
-There is currently an issue in Firefox with the pane being set to a min-width. I suspect this is due to the "Wanted Badly" responsive image.
+I would look to fix the need for a black background, probably by making the image full width on wider screens and making the pane take up more than 1 viewport. Also, I'd replace that ugly hamburger button with something else.
+
+There is currently an issue in Firefox with the pane acting like it has a min-width. I suspect this is due to the "Wanted Badly" responsive image.
 
 The scrolling animation isn't quite as smooth as I would have hoped. I was aiming to reduce the number of layers but I suspect that switching the parent element and changing the `margin-top` are bringing about the performance hit responsible for the "jank". I may decide to rewrite it to use 5 separate layers all absolutely positioned and see what the performance is like. On a desktop, the performance is usually great.
 
