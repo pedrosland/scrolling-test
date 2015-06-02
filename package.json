@@ -4,6 +4,7 @@
   "description": "A test design project",
   "scripts": {
     "serve": "harp server .",
+    "build": "babel --source-maps inline public/es6 -d public/js",
     "watch": "babel --source-maps inline --watch public/es6 -d public/js",
     "eslint": "eslint public/es6"
   },
