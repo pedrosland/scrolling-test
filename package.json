@@ -4,12 +4,14 @@
   "description": "A test design project",
   "scripts": {
     "serve": "harp server .",
-    "watch": "babel --source-maps inline --watch public/es6 -d public/js"
+    "watch": "babel --source-maps inline --watch public/es6 -d public/js",
+    "eslint": "eslint public/es6"
   },
   "author": "Pedro Sland <pedro_sland@hotmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "babel": "^5.2.17",
+    "babel": "^5.4.7",
+    "eslint": "^0.22.1",
     "harp": "^0.17.0"
   }
 }
