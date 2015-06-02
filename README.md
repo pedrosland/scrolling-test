@@ -37,6 +37,10 @@ To check JS for issues
 
     npm run eslint
 
+To compile a static version to dist
+
+    npm run compile
+
 ## Comments
 
 I've tested in the latest browsers: Chrome 42, Firefox 38 and IE 11.

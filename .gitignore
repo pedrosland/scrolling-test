@@ -3,5 +3,6 @@ npm-debug.log
 
 bower_components/
 
+dist/
 public/js/*
 !public/js/vendor/

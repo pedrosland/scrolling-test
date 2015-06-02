@@ -6,7 +6,8 @@
     "serve": "harp server .",
     "build": "babel --source-maps inline public/es6 -d public/js",
     "watch": "babel --source-maps inline --watch public/es6 -d public/js",
-    "eslint": "eslint public/es6"
+    "eslint": "eslint public/es6",
+    "compile": "rm dist -rf && npm run eslint && npm run build && harp compile . dist/"
   },
   "author": "Pedro Sland <pedro_sland@hotmail.com>",
   "license": "ISC",
